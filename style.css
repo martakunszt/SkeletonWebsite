@@ -5,3 +5,22 @@ body{
     color:#627264;
     background-color: #d8a4b1;
 }
+
+h1{
+    text-align:center;
+}
+.left{
+background-color:#fcedef;
+width:25%;
+height:120px;
+top:0;
+position:absolute;
+}
+.right{
+background-color:#edd8d5;
+width:75%;
+height:120px;
+position:absolute;
+right:0;
+top:0;
+}
