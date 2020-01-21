@@ -1,26 +1,398 @@
 body{
-    padding:0;
-    margin:0;
-    font-family:"Source Sans Pro";
-    color:#627264;
-    background-color: #d8a4b1;
+padding:0;
+margin:0;
+font-family:"Lato";
+font-size:1vw;
+color:#000000;
+height:100%
 }
 
-h1{
-    text-align:center;
-}
+
+/* LEFT COLUMN */
 .left{
-background-color:#fcedef;
-width:25%;
-height:120px;
+background-color:#333333;
+width:22%;
+min-height:130.5%;
 top:0;
 position:absolute;
 }
+
+/* LOGO IMAGE NOT NEEDED
+#logo img{
+text-align:center;
+height:9%;
+width:70%;
+left:15%;
+position:absolute;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
+background-color: #ffffff;
+}*/
+
+.welcome p{
+    color:#727272;
+    position:absolute;
+    left:13%;
+    top:7%;
+}
+
+#name{
+    color:#ffffff;
+    position:absolute;
+    left:13%;
+    padding-top:6%;
+}
+
+/* MENU METRICS */
+
+.menu-m{
+    position:absolute;
+    top:20%;
+    left:13%;
+    width:100%;
+}
+.menu-m p{
+    color:#727272;
+}
+.list ul{
+    list-style:none;
+    padding-left:0;
+}
+.list li{
+    line-height:2;
+    padding-top:10px;
+    padding-bottom:10px;
+    display:block;
+}
+.list a{
+    text-decoration:none;
+    color:#ffffff;
+}
+.list li:visited{
+    background-color:#3b3b3b;
+    width:100%;
+    padding-left: 100%;
+    margin-left: -100%;
+}
+.list li:hover{
+    background-color:#3b3b3b;
+    width:100%;
+    padding-left: 100%;
+    margin-left: -100%;
+}
+
+.list li:active{
+    background-color:#3b3b3b;
+    width:100%;
+    padding-left: 100%;
+    margin-left: -100%;
+}
+
+/* MENU INFORMATION */
+
+.menu-u{
+    position:absolute;
+    top:50%;
+    left:13%;
+    width:100%;
+}
+.menu-u p{
+    color:#727272;
+}
+
+/* RIGHT COLUMN */
+
 .right{
-background-color:#edd8d5;
-width:75%;
-height:120px;
+background-color: #ffffff;
+width:78%;
+height:100%;
 position:absolute;
 right:0;
 top:0;
+}
+
+h1{
+text-align:left;
+font-weight:400;
+position:absolute;
+top:4%;
+left:4%;
+}
+
+/* CIRCLE GRAPH */
+
+.circle-graph{
+width:50%;
+position:absolute;
+top:15%;
+right:0;
+}
+.circle-graph p{
+    font-weight:bold;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    position:absolute;
+    right:40%;
+}
+  
+.circular-chart {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    max-height: 75%;
+    top:-5%;
+    position:relative;
+  }
+  
+ .circle-bg {
+    fill: none;
+    stroke: #dedede;
+    stroke-width: 3;
+  }
+  
+  .circle {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: square;
+    animation: progress 1s ease-out forwards;
+  }
+
+  /* CIRCLE GRAPH ANIMATION */
+
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+  
+.circular-chart.orange .circle {
+    stroke: #ff9f00;
+}
+  
+.percentage {
+fill: #000000;
+font-size: 0.8em;
+text-anchor: middle;
+}
+
+.max {
+fill:#727272;
+font-size: 0.2em;
+text-anchor: middle;
+}
+
+/*TABLE*/
+
+.content{
+width:50%;
+}
+
+.content p{
+position:absolute;
+top:15%;
+left:4%;
+font-weight:bold;
+}
+
+#table {
+position:absolute;
+left:3.7%;
+top:18%;
+height:30%;
+text-align:left;
+}
+
+.table th{
+padding-right:50px;
+padding-bottom:0;
+}
+
+span.one{
+display:block;
+margin-top:20px;
+}
+
+
+
+/* BAR GRAPH */
+
+.bar-graph{
+width:100%;
+height:45%;
+position:relative;
+top:55%;
+}
+
+.bar-graph p{
+top:0;
+left:4%;
+position:absolute;
+font-weight:bold;
+}
+
+#chart-01{
+    width:91%;
+    height:90%;
+    position:absolute;
+    left:4%;
+    top:21%;
+}
+  
+/* RWD */
+
+@media screen and (max-width: 1680px) {
+    
+        body{
+            font-size:1.3vw
+        }
+
+      .flex-wrapper{
+        right:30%;
+        position:absolute; 
+        top:150%;
+    }
+    .menu-u{
+        top:41.8%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    
+    body{
+        font-size:1.3vw
+    }
+
+  .flex-wrapper{
+    right:30%;
+    position:absolute; 
+    top:150%;
+}
+.menu-u{
+    top:41.8%;
+}
+}
+@media screen and (max-width: 1024px) {
+    body{
+        font-size:1.8vw
+    }
+   
+    .flex-wrapper{
+        right:10%;
+        position:absolute; 
+    }
+    .circular-chart {
+        max-height: 220px;
+      }
+      .name{
+          line-height:2;
+      }
+	
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        font-size:2vw
+    }
+    
+    .circle-graph{
+     right:-6.5%;
+    }
+    .name{
+        line-height:3;
+    }
+}
+
+@media screen and (max-width: 700px) {
+        
+    body{
+        font-size:2.5vw
+    }
+    
+    .circle-graph{
+     position:relative;
+     top:57%;
+     left:25%;
+    }
+
+    .circle-graph p{
+        left:-5%;
+        position:relative;
+        
+    }
+
+    .left{
+        min-height:120%;
+    }
+   .right{
+       min-height:100%;
+    }
+    .content{
+        left:20%;
+        top:12%;
+        position:absolute;
+    }
+
+    span.one{
+        word-break: initial;
+        padding-top:20px;
+    }
+
+    .bar-graph{
+        top:90%;
+        height:46.6%;
+    }
+
+    .left{
+        height:143.7%;
+    }
+    .menu-u{
+        top:45%;
+        word-break: initial;
+    }
+}
+
+@media screen and (max-width: 376px){
+    body{
+        font-size:2.8vw
+    }
+ 
+    .circle-graph{
+     position:relative;
+     top:62%;
+     left:25%;
+    }
+
+    .name{
+        line-height: initial;
+    }
+    #wel {
+        top:4%;
+    }
+    .info{
+        word-break: initial;
+    }
+    .max{
+        font-size:1vw;
+    }
+    .bar-graph{
+        top:90%;
+        height:48.4%;
+    }
+
+    .left{
+        height:143.7%;
+    }
+}
+@media screen and (max-width: 360px){
+    .bar-graph{
+        top:90%;
+        height:49.2%;
+    }
+
+    .left{
+        height:143.7%;
+    }
 }
